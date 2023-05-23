@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D949ABA2A1D20810099A5E8 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D949AB92A1D20810099A5E8 /* TLButton.swift */; };
 		9DBC34542A1A2285007CDB5A /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC34532A1A2285007CDB5A /* ToDoListApp.swift */; };
 		9DBC34562A1A2285007CDB5A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBC34552A1A2285007CDB5A /* MainView.swift */; };
 		9DBC34582A1A2286007CDB5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBC34572A1A2286007CDB5A /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D949AB92A1D20810099A5E8 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		9DBC34502A1A2285007CDB5A /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DBC34532A1A2285007CDB5A /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		9DBC34552A1A2285007CDB5A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				9DBC34742A1A2DA7007CDB5A /* NewItemView.swift */,
 				9DBC34762A1A2DC8007CDB5A /* RegisterView.swift */,
 				9DBC34782A1A2DF4007CDB5A /* LoginView.swift */,
+				9D949AB92A1D20810099A5E8 /* TLButton.swift */,
 				9DBC347A2A1A2E24007CDB5A /* ToDoListItemView.swift */,
 				9DBC348E2A1A3915007CDB5A /* HeaderView.swift */,
 			);
@@ -242,6 +245,7 @@
 				9DBC34732A1A2D98007CDB5A /* ToDoListView.swift in Sources */,
 				9DBC34712A1A2D77007CDB5A /* ProfileView.swift in Sources */,
 				9DBC34772A1A2DC8007CDB5A /* RegisterView.swift in Sources */,
+				9D949ABA2A1D20810099A5E8 /* TLButton.swift in Sources */,
 				9DBC348D2A1A303D007CDB5A /* ToDoItemListViewViewModel.swift in Sources */,
 				9DBC34832A1A2ED7007CDB5A /* ProfileViewViewModel.swift in Sources */,
 				9DBC347D2A1A2E7A007CDB5A /* User.swift in Sources */,
