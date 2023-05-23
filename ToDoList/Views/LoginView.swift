@@ -13,11 +13,14 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
 
-    var body: some View {
+     var body: some View {
         NavigationView{
             VStack{
                 // Header
-                HeaderView()
+                HeaderView(title: "To Do List",
+                           subtitle: "Get things done",
+                           angle: 15,
+                           background: Color.pink)
                 // Login Form
                 Form{
                     TextField("Email Address", text:$email)
@@ -37,8 +40,10 @@ struct LoginView: View {
                                 .bold()
                         }
                     }
-                    
+                    .padding()
                 }
+                .offset(y: -50)
+            
                 
                 // Create Account
                 VStack{
