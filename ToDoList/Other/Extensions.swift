@@ -18,6 +18,6 @@ extension Encodable{
             return json ?? [:]
         } catch {
             return [:]
-        }
+        } 
     }
 }

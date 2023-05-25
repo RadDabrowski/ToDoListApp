@@ -14,7 +14,7 @@ struct ProfileView: View {
         NavigationView{
             VStack{
                 
-            }
+            } 
             .navigationTitle("Profile")
         }
     }
