@@ -13,6 +13,7 @@ class RegisterViewViewModel: ObservableObject{
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
+    @Published var errorMessage = ""
     
     init() {}
     func register (){
@@ -41,19 +42,40 @@ class RegisterViewViewModel: ObservableObject{
     }
     
     private func validate() -> Bool{
+        errorMessage = ""
         guard !name.trimmingCharacters(in: .whitespaces).isEmpty,
               !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else{
-            return false
-        }
-        guard email.contains("@") && email.contains(".") else {
+            errorMessage = "Please fill in all fields"
             return false
         }
         
-        guard password.count >= 6 else {
+        
+        let uppercaseLetterRegex = ".*[A-Z]+.*"
+        let specialCharacterRegex = ".*[^A-Za-z0-9]+.*"
+        let digitRegex = ".*\\d+.*"
+
+        let uppercaseLetterPredicate = NSPredicate(format: "SELF MATCHES %@", uppercaseLetterRegex)
+        let specialCharacterPredicate = NSPredicate(format: "SELF MATCHES %@", specialCharacterRegex)
+        let digitPredicate = NSPredicate(format: "SELF MATCHES %@", digitRegex)
+
+        guard uppercaseLetterPredicate.evaluate(with: password),
+              specialCharacterPredicate.evaluate(with: password),
+              digitPredicate.evaluate(with: password),
+            password.count >= 8 else {
+            errorMessage = "The password should contain at least 8 characters, at least 1 capital letter, 1 digit and a 1 special character"
             return false
         }
+
+        
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        guard emailPredicate.evaluate(with: email) else {
+            errorMessage = "Please enter valid email"
+            return false
+        }
+        
         return true
-    } 
+    }
 
 }

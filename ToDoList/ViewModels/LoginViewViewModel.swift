@@ -20,12 +20,10 @@ class LoginViewViewModel: ObservableObject{
         }
         // Try log in
         Auth.auth().signIn(withEmail: email, password: password)
-        
 
-        
     }
     private func validate() -> Bool{
-        errorMessage = "" 
+        errorMessage = ""
         guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
               !password.trimmingCharacters(in: .whitespaces).isEmpty else{
             errorMessage = "Please fill in all fields"
